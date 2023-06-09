@@ -1,0 +1,25 @@
+.h1 {
+    text-align: center;
+  }
+  
+  .mensaje {
+    color: rgb(132, 0, 255);
+    font-weight: bold;
+    font-size: 20px; /* Ajusta el tamaño de fuente según tus preferencias */
+    text-align: center;
+  }
+  
+  .pie {
+    color: rgb(255, 0, 34);
+    font-weight: bold;
+    font-size: 24px; /* Ajusta el tamaño de fuente según tus preferencias */
+    text-align: center;
+  }
+  
+  .img {
+    display: block; /* Añade display: block para centrar la imagen horizontalmente */
+    margin: 0 auto; /* Utiliza margin: 0 auto para centrar la imagen horizontalmente */
+    width: 200px;
+    margin-left: 40%;
+    border-radius: 60%;
+  }

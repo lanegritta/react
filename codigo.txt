@@ -1,0 +1,178 @@
+INSTALACION
+
+npm i create vite@latest .
+npm i
+npm run dev
+
+
+// JSX
+
+es una extensión de JavaScript que permite escribir HTML en el código de React. 
+
+Combina JavaScript y HTML para definir la estructura y apariencia de los componentes. 
+
+JSX facilita la creación de componentes visualmente atractivos y legibles.
+..................................
+
+
+const MiComponente = () => {
+
+return <h1>Hola, soy un componente en JSX</h1>;
+
+}
+
+
+// Estructura básica de un componente:
+
+En React, los componentes son bloques de construcción fundamentales. 
+
+Pueden ser clases o funciones y encapsulan la lógica y la interfaz de usuario de una parte específica de la aplicación. 
+
+Los componentes pueden anidarse y reutilizarse para construir interfaces más complejas.
+.................................
+
+
+import React from 'react';
+
+
+const MiComponente = () => {
+
+return (
+
+<div>
+
+<h1>Titulo del Componente</h1> <p>Contenido del Componente</p>
+
+</div>
+
+export default MiComponente;
+
+
+// COMPONENTES
+
+import React from 'react';
+
+const MiComponente = () => {
+
+const nombre = 'Juan';
+
+const edad = 25;
+
+return (
+
+<div>
+
+<h2>Información personal:</h2>
+
+<p>Nombre: (nombre)</p>
+
+<p>Edad: {edad}</p>
+
+</div>
+):
+}
+export default MiComponente;
+
+
+// Estado y props:
+
+El estado es un objeto que contiene datos que pueden cambiar durante la vida útil de un componente. 
+
+Los props (propiedades) son objetos que se pasan a un componente y se utilizan para configurar su comportamiento y apariencia. 
+
+Tanto el estado como los props son conceptos clave en React y permiten que los componentes sean dinámicos y reutilizables.
+.........................................................................
+
+import React, { useState } from 'react';
+
+const Message = ({text }) => {
+    const [showMessage, setShowMessage] = useState(false);
+
+const handleClick = () => { 
+    setShowMessage(!showMessage);
+};
+
+return (
+    <div>
+        <button onClick={handleClick}>Mostrar/Ocultar</button> 
+        {showMessage && <p>{text}</p>}
+    </div>
+);
+}   
+    export default Message;
+
+// Manejo del estado y actualización de la interfaz de usuario:
+
+import React, { useState } from "react";
+
+const Counter = () => {
+  const [count, setCount] = useState(0);
+
+const handleIncrement = () => {
+    setCount(count + 1);
+};
+    const handleDecrement = () => {
+        setCount(count - 1);
+};
+
+return (
+    <div>
+        <h1>Contador</h1>
+        <p>El valor actual es: {count}</p>
+        <button onClick={handleIncrement}>Incrementar</button>
+        <button onClick={handleDecrement}>Decrementar</button>
+    </div>
+);
+};
+
+export default Counter;
+
+
+// Creación de componentes reutilizables
+
+Es recomendable dividir la interfaz de usuario en componentes más pequeños y reutilizables. 
+
+Esto nos permite tener un código más modular y fácil de mantener. Además, los componentes pequeños son más fáciles de probar y depurar.
+..........................
+
+import React from 'react';
+
+const Button = ({ text, onClick }) => { return (
+
+<button onClick={onClick}>{text}</button>
+
+);
+
+}
+
+export default Button;
+
+
+// Componentes pequeños y reutilizables
+
+
+import React from 'react'; import Button from './Button';
+
+const App() => {
+
+const handleButtonClick() => { console.log('¡Botón clicado!');
+
+};
+
+return (
+
+<div>
+
+<Button text="Botón 1" onClick=[handleButtonClick} />
+
+<Button text="Botón 2" onClick(handleButtonClick) />
+
+<Button text="Botón 3" onClick(handleButtonClick) />
+
+</div>
+
+}
+
+export default App;
+
+
